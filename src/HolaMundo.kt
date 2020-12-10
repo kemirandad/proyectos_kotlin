@@ -15,4 +15,8 @@ fun main(args: Array<String>) {
     println(a.times(b))
     println(a.div(b))
 
+    var c = -2
+    val d = c.unaryMinus()
+    println("d: $d")
+
 }
