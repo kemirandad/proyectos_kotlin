@@ -1,5 +1,11 @@
+//const tiempo de compilación
+const val N = "NAME" // variables manera global
+var n = "n" //mala practica de programación
+val n2 = "n" //variables local tiempo de ejecución
+
+//Funciones Puras
 fun main(args: Array<String>) {
-    println(" Hola Mundo 2.0")
+    println("Hola Mundo")
     println(1+1)
     println(3-1)
     println(2*2)
@@ -9,14 +15,20 @@ fun main(args: Array<String>) {
     val a = 4
     val b = 2
 
-    println()
     println(a.plus(b))
     println(a.minus(b))
     println(a.times(b))
     println(a.div(b))
 
-    var c = -2
-    val d = c.unaryMinus()
-    println("d: $d")
+    val name = args[0]  //tiempo de ejecución
+    println(name)
+    println(N)
+
 
 }
+
+
+
+
+
+
