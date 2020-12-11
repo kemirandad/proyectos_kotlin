@@ -60,6 +60,20 @@ fun main(args: Array<String>) {
     """.trimIndent()
 
     println(parrafo.trimMargin("***"))
+
+    /**
+     * Conversiones de datos
+     */
+    println()
+    val num1: Int = 50
+
+    val num2: Long = num1.toLong()
+    println(num2)
+
+    val char1: Char = 'd'
+    val cadena1: String = "Hola"
+    cadena1.toCharArray()
+    println(cadena1)
 }
 
 
