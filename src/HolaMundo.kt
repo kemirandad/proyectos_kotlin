@@ -20,11 +20,46 @@ fun main(args: Array<String>) {
     println(a.times(b))
     println(a.div(b))
 
-    val name = args[0]  //tiempo de ejecución
-    println(name)
+    //val name: String = args[0]  //tiempo de ejecución
+    //println(name)
     println(N)
 
+    val nombre = "Anahí"
 
+    /**
+     * Tipando variables (opcional)
+     */
+    val apellido: String = "Salgado"
+
+    println()
+    println("Tu nombre es: " + nombre)
+    /**
+     * Redactando salidas de forma mas natural
+     */
+    println("Tu nombre es: $nombre $apellido ")
+
+    val nombreApellido = "Kenny\t\tMiranda"
+    println()
+    println("Tu nombre es: $nombreApellido")
+    println()
+
+    //Raw String
+    val parrafo = """
+        ***Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        ***Sed varius tristique fringilla. Maecenas dui odio, 
+        ***suscipit non finibus in, lacinia a turpis. Orci varius 
+        ***natoque penatibus et magnis dis parturient montes, 
+        ***nascetur ridiculus mus. Mauris sed urna urna. 
+        ***Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        ***Nullam pretium ipsum vel enim ultrices, at mollis ipsum bibendum. 
+        ***In hac habitasse platea dictumst. Vivamus sit amet tincidunt lorem,
+        ***vel volutpat neque. Ut vehicula lorem erat, quis condimentum sem 
+        ***egestas et. Vivamus porta arcu eget sem elementum, quis placerat 
+        ***neque tristique. Fusce feugiat, mi id aliquet ullamcorper, orci 
+        ***magna consectetur sapien, vel rhoncus leo magna nec nisl.
+    """.trimIndent()
+
+    println(parrafo.trimMargin("***"))
 }
 
 
