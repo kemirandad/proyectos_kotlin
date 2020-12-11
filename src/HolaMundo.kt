@@ -98,6 +98,14 @@ fun main(args: Array<String>) {
     println("What's your name?")
     val name= readLine()
     println("Hello $name!")
+
+
+    /**
+     * Implementando el método downTo para hacer un conteo regresivo
+     */
+    for ( count in 10 downTo 0){
+        println(count)
+    }
 }
 
 
