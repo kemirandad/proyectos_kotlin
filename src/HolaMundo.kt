@@ -74,7 +74,25 @@ fun main(args: Array<String>) {
     val cadena1: String = "Hola"
     cadena1.toCharArray()
     println(cadena1)
+
+    /**
+     * Operador rango
+     */
+
+    val oneToHundred = 1..10
+    println()
+    for ( i in oneToHundred ){
+        println(i)
+    }
+    println()
+
+    //val aToC = 'A'..'C'
+    for (letra in 'A'..'C'){
+        println(letra)
+    }
 }
+
+
 
 
 
