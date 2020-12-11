@@ -82,13 +82,13 @@ fun main(args: Array<String>) {
     val oneToHundred = 1..10
     println()
     for ( i in oneToHundred ){
-        println(i)
+       // println(i)
     }
     println()
 
     //val aToC = 'A'..'C'
     for (letra in 'A'..'C'){
-        println(letra)
+       // println(letra)
     }
 
     /**
@@ -104,8 +104,23 @@ fun main(args: Array<String>) {
      * Implementando el método downTo para hacer un conteo regresivo
      */
     for ( count in 10 downTo 0){
-        println(count)
+        //println(count)
     }
+
+    var i = 1
+
+    //while contadores
+    while ( i < 1 ){
+        true or false
+        println("mensaje: $i")
+        ++i
+    }
+
+    do {
+        println("mensaje do while: $i")
+        i++
+    } while ( i <= 1)
+
 }
 
 
