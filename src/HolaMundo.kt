@@ -149,9 +149,55 @@ fun main(args: Array<String>) {
         println("$index: $month")
     }
 
-    monthsOfYear.forEach { println(it) }
+    //monthsOfYear.forEach { println(it) }
 
+    /**
+     *Break, Continue y Labels
+     */
 
+    for (i in 1..3) {
+        println("\ni: $i ")
+        for (j in 1..5) {
+            if (j.equals(3)) continue
+            println("j: $j")
+            println("Woohoo")
+        }
+    }
+
+//    var count = 1
+//    for ( month in monthsOfYear){
+//
+//        println("$count siuuu ...")
+//        count++
+//        for (i in 'a'..'e'){
+//            if (i.equals('c')){
+//                continue
+//            }
+//            println("$i")
+//        }
+//    }
+
+    escaparJ@ for (i in 1..3) {
+        println("\ni: $i ")
+        for (j in 1..3) {
+            println("\nj: $j")
+            for (k in 1..5) {
+                if (k.equals(3)) continue@escaparJ
+                println("k: $k")
+            }
+        }
+    }
+
+    terminarTodoCiclo@ for (i in 1..3) {
+        println("\ni: $i ")
+        for (j in 1..3) {
+            println("\nj: $j")
+            for (k in 1..5) {
+                if (k.equals(3)) break@terminarTodoCiclo
+                println("k: $k")
+            }
+        }
+    }
 }
 
 
