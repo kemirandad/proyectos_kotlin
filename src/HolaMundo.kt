@@ -90,6 +90,14 @@ fun main(args: Array<String>) {
     for (letra in 'A'..'C'){
         println(letra)
     }
+
+    /**
+     * Lectura por consola
+     */
+
+    println("What's your name?")
+    val name= readLine()
+    println("Hello $name!")
 }
 
 
