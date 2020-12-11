@@ -109,7 +109,10 @@ fun main(args: Array<String>) {
 
     var i = 1
 
-    //while contadores
+    /**
+     * Ciclos while y do-while
+     */
+
     while ( i < 1 ){
         true or false
         println("mensaje: $i")
@@ -121,7 +124,36 @@ fun main(args: Array<String>) {
         i++
     } while ( i <= 1)
 
+    /**
+     * Iterando listas con for y FOREACH, además de capturar el index de cada
+     * elemento de la lista
+     */
+
+    val monthsOfYear = listOf("Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre")
+//    for(month in monthsOfYear){
+//        println(month)
+//    }
+
+    for ((index, month) in monthsOfYear.withIndex()){
+        println("$index: $month")
+    }
+
+    monthsOfYear.forEach { println(it) }
+
+
 }
+
 
 
 
