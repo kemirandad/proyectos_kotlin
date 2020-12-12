@@ -96,8 +96,8 @@ fun main(args: Array<String>) {
      */
 
     println("What's your name?")
-    val name= readLine()
-    println("Hello $name!")
+    //val name= readLine()
+    //println("Hello $name!")
 
 
     /**
@@ -198,6 +198,45 @@ fun main(args: Array<String>) {
             }
         }
     }
+
+//    var msg: String?
+//    msg = null
+//    try {
+//        println(msg!!.length)
+//    } catch (IOException e){
+//        println(null)
+//    }
+
+
+
+    /*try {
+        var compute: String?
+        compute = null
+        var longitud: Int = compute!!.length
+    }catch (e: NullPointerException){
+        println("Ingresa un valor, no aceptamos valores nulos")
+    }*/
+
+    //llamada segura
+    var compute: String? = null
+    var longitud: Int? = compute?.length // null
+    println("longitud: $longitud")
+
+
+    /**
+     * Operador Elvis
+     */
+
+    var teclado: String? = null
+    var longitudTeclado: Int = teclado?.length ?: 0
+    println("Longitud Teclado: $longitudTeclado")
+
+    val listWithNulls: List<Int?> = listOf<Int?>(7,null,null,4)
+    println("Lista con Null: $listWithNulls")
+
+    val listWithoutNulls: List<Int?> = listWithNulls.filterNotNull()
+    println(listWithoutNulls)
+
 }
 
 
