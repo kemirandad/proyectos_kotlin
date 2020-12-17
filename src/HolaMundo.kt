@@ -307,6 +307,12 @@ fun main(args: Array<String>) {
     println("\nEl promedio2 de los números es: " +
             "${averageNumbers2(intArrayOf(1,2,5,3,2,1))}")
 
+    println("${evaluate(number = 6)}")
+
+}
+
+fun evaluate(chararter: Char= '=', number: Int = 2): String{
+    return "$number es $chararter a 2"
 }
 
 fun averageNumbers(numbers: IntArray): Int{
