@@ -1,3 +1,5 @@
+import kotlin.math.sqrt
+
 //const tiempo de compilación
 const val N = "NAME" // variables manera global
 var n = "n" //mala practica de programación
@@ -281,7 +283,47 @@ fun main(args: Array<String>) {
     arrayObject.reverse()
     for (a in arrayObject) { println("Array reversa $a") }
 
+    /**
+     * Expresiones vs valores
+     */
+
+    var x = 5
+    println("X es igual a 5? ${x==5}") // Return un booleano true
+
+    var mensaje = "El valor de x es $x"
+    x++
+    println("${mensaje.replace("es", "fue")}, x es igual a: $x")
+
+    /**
+     * Funciones
+     */
+
+    //val valor = readLine()?.toDouble()
+    //println("\nRaíz cuadrada de $valor es igual a : ${sqrt(valor!!)}")
+
+    val numbers2 = intArrayOf(6, 6, 7 ,10, 15, 12)
+    println("El promedio de los números es: ${averageNumbers(numbers2)}")
+
+    println("\nEl promedio2 de los números es: " +
+            "${averageNumbers2(intArrayOf(1,2,5,3,2,1))}")
+
 }
+
+fun averageNumbers(numbers: IntArray): Int{
+    var sum = 0
+    for (num in numbers){
+        sum = sum.plus(num)
+    }
+    val average = sum / numbers.size
+    return average
+}
+
+//Functions
+fun averageNumbers2(numbers:IntArray):Int{
+    val sumas = numbers.sum()
+    return sumas.div(numbers.size)
+}
+
 
 
 
