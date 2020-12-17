@@ -309,6 +309,12 @@ fun main(args: Array<String>) {
 
     println("${evaluate(number = 6)}")
 
+    /**
+     * Lambdas
+     */
+
+    val hola = { println("Hola mundo")}()
+    hola()
 }
 
 fun evaluate(chararter: Char= '=', number: Int = 2): String{
