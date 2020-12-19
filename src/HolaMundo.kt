@@ -1,3 +1,4 @@
+import model.Camera
 import kotlin.math.sqrt
 
 //const tiempo de compilación
@@ -333,6 +334,18 @@ fun main(args: Array<String>) {
         }
     }
     println(calculateNumber(6))
+
+    /**
+     * Implementando clases
+     */
+
+    val camera = Camera()
+    camera.turnOn()
+    println("La camara esta: "+camera.isOn)
+
+    camera.isOn = false
+    println("\nLa camara esta: "+camera.isOn)
+
 }
 
 fun averageNumbers(numbers: IntArray): Int{
