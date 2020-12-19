@@ -302,11 +302,37 @@ fun main(args: Array<String>) {
     //println("\nRaíz cuadrada de $valor es igual a : ${sqrt(valor!!)}")
 
     val numbers2 = intArrayOf(6, 6, 7 ,10, 15, 12)
-    println("El promedio de los números es: ${averageNumbers(numbers2)}")
+    println("\nEl promedio de los números es: ${averageNumbers(numbers2)}")
 
     println("\nEl promedio2 de los números es: " +
             "${averageNumbers2(intArrayOf(1,2,5,3,2,1))}")
 
+    /**
+     * Funciones lambdas
+     */
+
+    //lambdas
+
+    val hola = { println("\nHola mundo") }
+    hola()
+
+    //val suma = {instrucciones -> sentencias}
+    val plus = {a: Int, b: Int, c: Int -> a+b+c}
+    val result = plus(3,4,5)
+    println(result)
+    //Otra forma
+    println(plus(1,2,3))
+    //Otra otra forma
+    println({a: Int, b: Int, c: Int -> a+b+c}(7,8,9))
+
+    val calculateNumber = {n:Int ->
+        when (n){
+            in 1..3 -> println("Tu número está entre 1 y 3")
+            in 4..7 -> println("Tu número está entre 4 y 7")
+            in 8..10 -> println("Tu número está entre 8 y 10")
+        }
+    }
+    println(calculateNumber(6))
 }
 
 fun averageNumbers(numbers: IntArray): Int{
