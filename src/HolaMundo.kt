@@ -1,4 +1,5 @@
 import model.Camera
+import model.Shoe
 import kotlin.math.sqrt
 
 //const tiempo de compilación
@@ -352,6 +353,17 @@ fun main(args: Array<String>) {
     camera.setResolution(1080)
     println("Resolution: ${camera.getResolution()}")
 
+    /**
+     * Nueva clase Shoe
+     */
+    println()
+    var shoe = Shoe()
+    shoe.size = 37
+    println(shoe.size)
+
+    println()
+    shoe.model = "Zapatos de tacón"
+    println(shoe.model)
 }
 
 fun averageNumbers(numbers: IntArray): Int{
