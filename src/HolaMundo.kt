@@ -341,10 +341,16 @@ fun main(args: Array<String>) {
 
     val camera = Camera()
     camera.turnOn()
-    println("La camara esta: "+camera.isOn)
+    println(camera.cameraStatus())
+    camera.turnOff()
+    println(camera.cameraStatus())
 
-    camera.isOn = false
-    println("\nLa camara esta: "+camera.isOn)
+    /**
+     * Diseñando getters y setters
+     */
+
+    camera.setResolution(1080)
+    println("Resolution: ${camera.getResolution()}")
 
 }
 
