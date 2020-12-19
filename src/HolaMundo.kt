@@ -1,6 +1,6 @@
 import model.Camera
+import model.Movie
 import model.Shoe
-import kotlin.math.sqrt
 
 //const tiempo de compilación
 const val N = "NAME" // variables manera global
@@ -357,14 +357,31 @@ fun main(args: Array<String>) {
      * Nueva clase Shoe
      */
     println()
-    var shoe = Shoe()
-    shoe.size = 37
+    var shoe = Shoe(12345, "Praga")
+    /*shoe.size = 37
     println(shoe.size)
 
     println()
     shoe.model = "Zapatos de tacón"
     println(shoe.model)
+    println(shoe.mark)*/
+
+
+    /**
+     * Nueva clase Movie
+     */
+
+    val movie = Movie("Coco","Pixar",120)
+    println()
+    println(movie.title)
+    println(movie.creator)
+    println("${movie.duration} min")
+
 }
+
+//data class Movie(val title: String, val creator: String, val duration: Int) {
+//
+//}
 
 fun averageNumbers(numbers: IntArray): Int{
     var sum = 0
