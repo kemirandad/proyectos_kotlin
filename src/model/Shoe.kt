@@ -1,10 +1,32 @@
 package model
 
-class Shoe(var sku: Int, var mark: String) { //Clases para Datos - Data Class
+class Shoe(name: String, description: String, sku: Int, var brand: String):
+        Product(name, description, sku) { //Clases para Datos - Data Class
+
+    override fun create(): String {
+        return "Create shoe"
+    }
+
+    override fun read(): String {
+        return "Read shoe"
+    }
+
+    override fun udpate(): String {
+        return "Update show"
+    }
+
+    override fun delete(): String {
+        return "Delete shoe"
+    }
+
+    override fun toString(): String {
+        return super.toString() + "SKU id: $sku \nMarca: $brand \nModelo: $model \nSize: $size \nColor: $color"
+    }
 
     init {
         println("SKU ID: $sku")
-        println("Marca: $mark")
+        println("Brand: $brand")
+        toString()
     }
 
     var size:Int = 34 //valor mínimo

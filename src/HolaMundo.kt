@@ -357,7 +357,8 @@ fun main(args: Array<String>) {
      * Nueva clase Shoe
      */
     println()
-    var shoe = Shoe(12345, "Praga")
+    var shoe = Shoe("Shoe", "Blue Shoes", 12345, "Praga")
+    println("Shoe: $shoe")
     /*shoe.size = 37
     println(shoe.size)
 
@@ -376,6 +377,11 @@ fun main(args: Array<String>) {
     println(movie.title)
     println(movie.creator)
     println("${movie.duration} min")
+
+    /**
+     *Nueva clase Product (Padre)
+     */
+
 
 }
 
