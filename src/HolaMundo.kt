@@ -1,4 +1,6 @@
-import kotlin.math.sqrt
+import model.Camera
+import model.Movie
+import model.Shoe
 
 //const tiempo de compilación
 const val N = "NAME" // variables manera global
@@ -302,7 +304,7 @@ fun main(args: Array<String>) {
     //println("\nRaíz cuadrada de $valor es igual a : ${sqrt(valor!!)}")
 
     val numbers2 = intArrayOf(6, 6, 7 ,10, 15, 12)
-    println("El promedio de los números es: ${averageNumbers(numbers2)}")
+    println("\nEl promedio de los números es: ${averageNumbers(numbers2)}")
 
     println("\nEl promedio2 de los números es: " +
             "${averageNumbers2(intArrayOf(1,2,5,3,2,1))}")
@@ -329,7 +331,85 @@ fun main(args: Array<String>) {
 
 fun evaluate(chararter: Char= '=', number: Int = 2): String{
     return "$number es $chararter a 2"
+    /**
+     * Funciones lambdas
+     */
+
+    //lambdas
+
+    val hola = { println("\nHola mundo") }
+    hola()
+
+    //val suma = {instrucciones -> sentencias}
+    val plus = {a: Int, b: Int, c: Int -> a+b+c}
+    val result = plus(3,4,5)
+    println(result)
+    //Otra forma
+    println(plus(1,2,3))
+    //Otra otra forma
+    println({a: Int, b: Int, c: Int -> a+b+c}(7,8,9))
+
+    val calculateNumber = {n:Int ->
+        when (n){
+            in 1..3 -> println("Tu número está entre 1 y 3")
+            in 4..7 -> println("Tu número está entre 4 y 7")
+            in 8..10 -> println("Tu número está entre 8 y 10")
+        }
+    }
+    println(calculateNumber(6))
+
+    /**
+     * Implementando clases
+     */
+
+    val camera = Camera()
+    camera.turnOn()
+    println(camera.cameraStatus())
+    camera.turnOff()
+    println(camera.cameraStatus())
+
+    /**
+     * Diseñando getters y setters
+     */
+
+    camera.setResolution(1080)
+    println("Resolution: ${camera.getResolution()}")
+
+    /**
+     * Nueva clase Shoe
+     */
+    println()
+    var shoe = Shoe("Shoe", "Blue Shoes", 12345, "Praga")
+    println("Shoe: $shoe")
+    /*shoe.size = 37
+    println(shoe.size)
+
+    println()
+    shoe.model = "Zapatos de tacón"
+    println(shoe.model)
+    println(shoe.mark)*/
+
+
+    /**
+     * Nueva clase Movie
+     */
+
+    val movie = Movie("Coco","Pixar",120)
+    println()
+    println(movie.title)
+    println(movie.creator)
+    println("${movie.duration} min")
+
+    /**
+     *Nueva clase Product (Padre)
+     */
+
+
 }
+
+//data class Movie(val title: String, val creator: String, val duration: Int) {
+//
+//}
 
 fun averageNumbers(numbers: IntArray): Int{
     var sum = 0
