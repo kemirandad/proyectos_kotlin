@@ -313,8 +313,18 @@ fun main(args: Array<String>) {
      * Lambdas
      */
 
-    val hola = { println("Hola mundo")}()
-    hola()
+    //val hola = { println("Hola mundo")}()
+    //hola()
+
+    fun random(): Int {
+        return (Math.random() * 100).toInt()
+    }
+
+    val random1 = random()
+    val random2 = {random()}
+
+    println("\n"+random1)
+    println(random2)
 }
 
 fun evaluate(chararter: Char= '=', number: Int = 2): String{
