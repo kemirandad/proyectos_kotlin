@@ -24,6 +24,8 @@ fun main() {
         val num1 = readLine()?.toDouble()
         println("Ingrese el segundo valor...")
         val num2 = readLine()?.toDouble()
+        println("Ingrese el tercer valor...")
+        val num3 = readLine()?.toDouble()
         println("""
             Elija una operación:
             1. suma
@@ -34,10 +36,10 @@ fun main() {
         """.trimIndent())
         val condicion = readLine().toString()
         when(condicion){
-            "1" -> println("$num1 + $num2 = ${calculadora(num1!!, num2!!, ::sumar)}")
-            "2" -> println("$num1 - $num2 = ${calculadora(num1!!, num2!!, ::restar)}")
-            "3" -> println("$num1 * $num2 = ${calculadora(num1!!, num2!!, ::multiplicar)}")
-            "4" -> println("$num1 / $num2 = ${calculadora(num1!!, num2!!, ::dividir)}")
+            "1" -> println("$num1 + $num2 + $num3 = ${calculadora(num1!!, num2!!, num3!!, ::sumar)}")
+            "2" -> println("$num1 - $num2 - $num3 = ${calculadora(num1!!, num2!!, num3!!, ::restar)}")
+            "3" -> println("$num1 * $num2 * $num3 = ${calculadora(num1!!, num2!!, num3!!, ::multiplicar)}")
+            "4" -> println("$num1 / $num2 / $num3 = ${calculadora(num1!!, num2!!, num3!!, ::dividir)}")
             "5" -> println("Regrese pronto")
             else -> println("Opción no disponible")
         }
@@ -45,10 +47,10 @@ fun main() {
 
 }
 
-fun calculadora(a: Double, b: Double, operar:(Double, Double) -> Double): Double{
-    return operar(a, b)
+fun calculadora(a: Double, b: Double, c:Double, operar:(Double, Double, Double) -> Double): Double{
+    return operar(a, b, c)
 }
-fun sumar(x: Double, y: Double) = x.plus(y)
-fun restar(x: Double, y: Double) = x.minus(y)
-fun multiplicar(x: Double, y: Double) = x.times(y)
-fun dividir(x: Double, y: Double) = x.div(y)
+fun sumar(x: Double, y: Double, z: Double) = x.plus(y).plus(z)
+fun restar(x: Double, y: Double, z: Double) = x.minus(y).minus(z)
+fun multiplicar(x: Double, y: Double, z: Double) = x.times(y).times(z)
+fun dividir(x: Double, y: Double, z: Double) = x.div(y).div(z)

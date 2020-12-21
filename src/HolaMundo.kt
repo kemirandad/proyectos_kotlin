@@ -327,6 +327,29 @@ fun main(args: Array<String>) {
 
     println("\n"+random1)
     println(random2)
+
+    /**
+     * HasMap
+     */
+
+    val months = hashMapOf("Enero" to 1,
+            "Febrero" to 2,
+            "Marzo" to 3,
+            "Abril" to 4,
+            "Mayo" to 5,
+            "Junio" to 6,
+            "Julio" to 7,
+            "Agosto" to 8,
+            "Septiembre" to 9,
+            "Octubre" to 10,
+            "Noviembre" to 11,
+            "Diciembre" to 12)
+
+    for ((k, v) in months){
+        println("$k: $v")
+    }
+    println()
+
 }
 
 fun evaluate(chararter: Char= '=', number: Int = 2): String{
@@ -403,6 +426,11 @@ fun evaluate(chararter: Char= '=', number: Int = 2): String{
     /**
      *Nueva clase Product (Padre)
      */
+
+    /**
+     * HasMap
+     */
+
 
 
 }
